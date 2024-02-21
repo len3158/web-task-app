@@ -4,7 +4,7 @@ import java.util.UUID;
 
 public interface ITask {
     UUID getId();
-    void setId(Long id);
+    void setId(Long id); // TODO
 
     String getTitle();
     void setTitle(String title);
@@ -17,4 +17,6 @@ public interface ITask {
 
     String getExpiringDate();
     void setExpiringDate(String expiringDate);
+
+    Boolean deleteTask();
 }
