@@ -1,6 +1,6 @@
 package com.controller;
 
-import com.datamodel.UserDTO;
+import com.model.UserDTO;
 import com.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,14 +14,18 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/subscribe")
-    public ResponseEntity<UtilisateurDTO> subscribeUser(@RequestBody UtilisateurDTO utilisateurDTO) {
-        return ResponseEntity.ok(userService.subscribeUser(utilisateurDTO));
+    public ResponseEntity<UserDTO> subscribeUser(@RequestBody UserDTO userDTO) {
+        return ResponseEntity.ok(userService.subscribeUser(userDTO));
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<UtilisateurDTO> getUserById(@PathVariable Long id) {
+    public ResponseEntity<UserDTO> getUserById(@PathVariable String id) {
         return ResponseEntity.ok(userService.getUserById(id));
     }
 
-    // TODO: Consider user profile update
+    @GetMapping("/{id}")
+    public ResponseEntity<UserDTO> updateUserInfo(@PathVariable String id, @RequestBody UserDTO userDTO) {
+        return ResponseEntity.ok(userService.getUserById(id, userDTO));
+    }
+
 }

@@ -34,7 +34,7 @@ public class DBTask {
     // Getters et Setters
 
     public UUID getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(UUID id) {
@@ -42,7 +42,7 @@ public class DBTask {
     }
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public void setTitle(String title) {
@@ -50,7 +50,7 @@ public class DBTask {
     }
 
     public String getDescription() {
-        return description;
+        return this.description;
     }
 
     public void setDescription(String description) {
@@ -58,7 +58,7 @@ public class DBTask {
     }
 
     public Boolean isTaskComplete() {
-        return isComplete;
+        return this.isComplete;
     }
 
     public void setIsTaskComplete(boolean isComplete) {
@@ -66,7 +66,7 @@ public class DBTask {
     }
 
     public Date getExpiringDate() {
-        return expiringDate;
+        return this.expiringDate;
     }
 
     public void setExpiringDate(Date expiringDate) {
@@ -77,11 +77,11 @@ public class DBTask {
     @Override
     public String toString() {
         return "Task{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", isComplete=" + isComplete +
-                ", expiringDate=" + expiringDate +
+                "id=" + this.id +
+                ", title='" + this.title + '\'' +
+                ", description='" + this.description + '\'' +
+                ", isComplete=" + this.isComplete +
+                ", expiringDate=" + this.expiringDate +
                 '}';
     }
 }

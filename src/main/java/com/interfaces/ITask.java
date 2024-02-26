@@ -19,4 +19,6 @@ public interface ITask {
     void setExpiringDate(String expiringDate);
 
     Boolean deleteTask();
+
+    String getTaskId(String id);
 }
